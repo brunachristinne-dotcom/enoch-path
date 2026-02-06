@@ -12,3 +12,11 @@
 - [x] Implementar tracking de estatísticas no frontend
 - [ ] Criar painel de administração para visualizar dados
 - [ ] Testar todas as funcionalidades com vitest
+
+## Landing Page Completa
+- [x] Fazer upload de todos os assets (imagens e vídeos) para S3
+- [x] Implementar hero section com vídeo de fundo (Redimensionamento_de_Vídeo_para_.mp4)
+- [x] Criar seção "Sobre o Jogo" com história/lore detalhada
+- [x] Criar galeria de concept art com processo de desenvolvimento
+- [x] Adicionar formulário de contato simples
+- [x] Testar responsividade em mobile e desktop
