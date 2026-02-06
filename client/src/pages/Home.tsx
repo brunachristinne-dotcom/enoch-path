@@ -1,6 +1,10 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Sword, Scroll, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import { NewsletterForm } from "@/components/NewsletterForm";
+import { FeedbackForm } from "@/components/FeedbackForm";
+import { trpc } from "@/lib/trpc";
 
 /**
  * DESIGN PHILOSOPHY: Dark Mysticism with Alchemical Gold
@@ -11,12 +15,25 @@ import { useEffect, useState } from "react";
  */
 
 export default function Home() {
+  const { user } = useAuth();
   const [scrollY, setScrollY] = useState(0);
+
+  // Track page visit on mount
+  const trackVisit = trpc.stats.track.useMutation();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Track page visit
+    trackVisit.mutate({
+      page: "/",
+      userAgent: navigator.userAgent,
+      referrer: document.referrer || undefined,
+    });
   }, []);
 
   return (
@@ -178,6 +195,36 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* DIVIDER */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+
+      {/* NEWSLETTER SECTION */}
+      <section className="py-20 md:py-32 bg-background relative">
+        <div className="container max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl text-center mb-4 text-gold-bright">
+            Join the Journey
+          </h2>
+          <div className="w-24 h-1 bg-accent mx-auto mb-16"></div>
+
+          <NewsletterForm />
+        </div>
+      </section>
+
+      {/* DIVIDER */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+
+      {/* FEEDBACK SECTION */}
+      <section className="py-20 md:py-32 bg-secondary/20 relative">
+        <div className="container max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl text-center mb-4 text-gold-bright">
+            Your Voice Matters
+          </h2>
+          <div className="w-24 h-1 bg-accent mx-auto mb-16"></div>
+
+          <FeedbackForm />
         </div>
       </section>
 
