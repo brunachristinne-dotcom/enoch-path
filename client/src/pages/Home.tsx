@@ -64,26 +64,6 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-32">
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-8"></div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-            <Button
-              size="lg"
-              className="bg-accent text-accent-foreground hover:bg-gold-bright transition-all duration-300 glow-gold"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Discover the Path
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-accent text-accent hover:bg-accent/10"
-              onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              View Concept Art
-            </Button>
-          </div>
-
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-accent" />
