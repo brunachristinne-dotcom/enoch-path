@@ -62,13 +62,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-background"></div>
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-32">
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ChevronDown className="w-8 h-8 text-accent" />
-          </div>
-        </div>
+
       </section>
 
       {/* DIVIDER - Alchemical Line */}
