@@ -66,11 +66,6 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-32">
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-8"></div>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-            Embark on an epic journey through a dark fantasy realm where divine erosion marks the chosen one. 
-            Uncover ancient mysteries, wield legendary weapons, and face the darkness within.
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
             <Button
               size="lg"
