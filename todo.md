@@ -20,3 +20,9 @@
 - [x] Criar galeria de concept art com processo de desenvolvimento
 - [x] Adicionar formulário de contato simples
 - [x] Testar responsividade em mobile e desktop
+
+## Navegação
+- [x] Criar barra de navegação fixa no topo
+- [x] Adicionar links para seções (Sobre, Galeria, Contato)
+- [x] Implementar scroll suave ao clicar nos links
+- [x] Adicionar efeito de transparência ao rolar a página

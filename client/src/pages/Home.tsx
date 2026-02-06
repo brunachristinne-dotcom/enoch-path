@@ -6,6 +6,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { FeedbackForm } from "@/components/FeedbackForm";
 import { ConceptArtGallery } from "@/components/ConceptArtGallery";
 import { ContactForm } from "@/components/ContactForm";
+import { Navbar } from "@/components/Navbar";
 import { trpc } from "@/lib/trpc";
 
 /**
@@ -40,6 +41,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
+      <Navbar />
       {/* HERO SECTION - Video Background with Logo */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
