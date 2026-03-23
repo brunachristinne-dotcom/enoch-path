@@ -26,3 +26,9 @@
 - [x] Adicionar links para seções (Sobre, Galeria, Contato)
 - [x] Implementar scroll suave ao clicar nos links
 - [x] Adicionar efeito de transparência ao rolar a página
+
+## Footer
+- [x] Criar componente de footer com redes sociais
+- [x] Adicionar botão "Voltar ao Topo"
+- [x] Adicionar informações de copyright
+- [x] Integrar footer na página Home

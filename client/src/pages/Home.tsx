@@ -7,6 +7,7 @@ import { FeedbackForm } from "@/components/FeedbackForm";
 import { ConceptArtGallery } from "@/components/ConceptArtGallery";
 import { ContactForm } from "@/components/ContactForm";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { trpc } from "@/lib/trpc";
 
 /**
@@ -248,18 +249,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-
       {/* FOOTER */}
-      <footer className="bg-background border-t border-border py-12">
-        <div className="container max-w-6xl mx-auto px-4 text-center">
-          <p className="text-gray-500 mb-4">© 2026 Enoch Path. All rights reserved.</p>
-          <p className="text-gray-600 text-sm">
-            An epic dark fantasy journey awaits. Are you ready to walk the path?
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
